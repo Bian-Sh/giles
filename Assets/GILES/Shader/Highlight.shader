@@ -50,7 +50,8 @@ Shader "Custom/Highlight"
 
 				float4 vert = v.vertex;
 				vert.xyz += normalize(vert.xyz - _Center) * _Scale;
-				o.pos = mul(UNITY_MATRIX_MV, vert);
+				//o.pos = mul(UNITY_MATRIX_MV, vert);
+				o.pos = mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, vert));
 				o.pos.xyz *= 1.01;
 				o.pos = mul(UNITY_MATRIX_P, o.pos);
 

@@ -48,7 +48,9 @@
 				v2f o;
 
 				// o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-				o.pos = mul(UNITY_MATRIX_MV, v.vertex);
+				//o.pos = mul(UNITY_MATRIX_MV, v.vertex);
+				o.pos = mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, float4(v.vertex)));
+
 				o.pos.xyz *= .99;
 				o.pos = mul(UNITY_MATRIX_P, o.pos);
 

@@ -47,7 +47,8 @@ Shader "Custom/UnlitVertexColorWavy"
 			{
 				v2f o;
 
-				o.pos = mul(UNITY_MATRIX_MV, v.vertex);
+				//o.pos = mul(UNITY_MATRIX_MV, v.vertex);
+				o.pos = mul(UNITY_MATRIX_V, mul(unity_ObjectToWorld, float4(v.vertex)));
 
 				float rad = (((frac(_Time.y * _Freq + v.texcoord.y) - .5) * 2) * 3.14);// * smoothstep(0, .2, v.texcoord.x);
 				o.pos += fixed4(0, sin(rad) * _Amp * smoothstep(0,.3, v.texcoord.x), 0, 0);
