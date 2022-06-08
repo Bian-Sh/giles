@@ -1,13 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System.Linq;
 using System.Collections.Generic;
-using GILES;
 
 namespace GILES.Interface
 {
-	public class pb_PrefabBrowser : MonoBehaviour
+    public class pb_PrefabBrowser : MonoBehaviour
 	{
 		List<GameObject> prefabs = new List<GameObject>();
 
@@ -134,7 +130,6 @@ namespace GILES.Interface
                     CreateFileButton(go);
                 }
             }
-#if UNITY_2019
         }
 	}
 }

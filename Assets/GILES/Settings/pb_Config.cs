@@ -61,9 +61,6 @@ namespace GILES
 			typeof(UnityEngine.TrailRenderer),
 			typeof(UnityEngine.LineRenderer),
 			typeof(UnityEngine.MeshRenderer),
-#if !UNITY_2019_4
-      		        typeof(UnityEngine.GUIElement),
-#endif
 			typeof(UnityEngine.UI.Image),
 			typeof(UnityEngine.ReflectionProbe),
 			typeof(UnityEngine.LODGroup),
@@ -80,10 +77,6 @@ namespace GILES
 			typeof(UnityEngine.WindZone),
 			typeof(UnityEngine.ParticleSystem),
 			typeof(UnityEngine.ParticleSystemRenderer),
-#if UNITY_5_2 || UNITY_5_3
-			typeof(UnityEngine.ParticleEmitter),
-			typeof(UnityEngine.EllipsoidParticleEmitter),
-#endif
 			typeof(UnityEngine.Rigidbody),
 			typeof(UnityEngine.Joint),
 			typeof(UnityEngine.HingeJoint),

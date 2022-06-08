@@ -23,10 +23,18 @@ namespace GILES.Example
 
 		[HideInInspector] [SerializeField] private string json = null;
 
-		/**
+        protected override void Initialize()
+        {
+            base.Initialize();
+            SceneManager.sceneLoaded += SceneManager_sceneLoaded;
+        }
+
+
+
+        /**
 		 * Call this to load level.
 		 */
-		public static void LoadScene(string path)
+        public static void LoadScene(string path)
 		{
 	 		string san = pb_FileUtility.SanitizePath(path, ".json");
 
@@ -53,7 +61,7 @@ namespace GILES.Example
             pb_SceneLoader.playTest = playTest;
         }
 
-        private void OnLevelWasLoaded(int i)
+        private void SceneManager_sceneLoaded(Scene arg0, LoadSceneMode arg1)
         {
             if (SceneManager.GetActiveScene().name == sceneToLoadLevelInto && !string.IsNullOrEmpty(json))
             {

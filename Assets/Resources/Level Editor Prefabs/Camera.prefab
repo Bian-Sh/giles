@@ -11,10 +11,7 @@ GameObject:
   - component: {fileID: 456678}
   - component: {fileID: 2057726}
   - component: {fileID: 12486638}
-  - component: {fileID: 9233792}
-  - component: {fileID: 8102696}
   - component: {fileID: 11414774}
-  - component: {fileID: -1897008984}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -87,42 +84,7 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153238}
   m_Enabled: 1
---- !u!92 &9233792
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153238}
-  m_Enabled: 1
---- !u!81 &8102696
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153238}
-  m_Enabled: 1
 --- !u!114 &11414774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a61987817fbe4b45a87582bcb2be501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  metadata:
-    _fileId: abf9a3c3e0f6df64ea24a34b1adc2200
-    _assetBundlePath:
-      assetBundleName: 
-      filePath: 
-    _assetType: 0
-    tags: []
---- !u!114 &-1897008984
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

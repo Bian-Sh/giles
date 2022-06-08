@@ -46,8 +46,9 @@ namespace GILES.UnityEditor
 
 					GameObject go = obj as GameObject;
 
-					if(go != null && PrefabUtility.GetPrefabType(go) == PrefabType.Prefab)
-					{
+						if (go && PrefabUtility.GetPrefabAssetType(go) != PrefabAssetType.NotAPrefab
+									&& PrefabUtility.GetPrefabAssetType(go) != PrefabAssetType.MissingAsset)
+						{
 						pb_MetaDataComponent metadata = go.GetComponent<pb_MetaDataComponent>();
 
 						if(!metadata)

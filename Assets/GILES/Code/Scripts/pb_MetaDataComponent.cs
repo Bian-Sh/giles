@@ -43,7 +43,9 @@ namespace GILES
 			bool modified = false;
 
 #if UNITY_EDITOR
-			if( PrefabUtility.GetPrefabType(this.gameObject) == PrefabType.Prefab && metadata.assetType != AssetType.Bundle )
+			if (PrefabUtility.GetPrefabAssetType(this.gameObject) != PrefabAssetType.NotAPrefab
+		&& PrefabUtility.GetPrefabAssetType(this.gameObject) != PrefabAssetType.MissingAsset
+		&& metadata.assetType != AssetType.Bundle)
 			{
 				string path = AssetDatabase.GetAssetPath(this.gameObject);
 				string guid = AssetDatabase.AssetPathToGUID(path);
